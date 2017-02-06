@@ -19,7 +19,7 @@ object ScalatestBuild extends Build {
 
   // To temporarily switch sbt to a different Scala version:
   // > ++ 2.10.5
-  val buildScalaVersion = "2.11.8"
+  val buildScalaVersion = "2.12.1"
 
   val releaseVersion = "3.0.1"
 
@@ -397,7 +397,7 @@ object ScalatestBuild extends Build {
       scalaJSOptimizerOptions ~= { _.withDisableOptimizer(true) },
       //jsEnv := NodeJSEnv(executable = "node").value,
       //jsEnv := PhantomJSEnv().value,
-      scalaJSUseRhino in Global := true, 
+      scalaJSUseRhino in Global := true,
       scalaJSStage in Global := FastOptStage,
       //postLinkJSEnv := PhantomJSEnv().value,
       //postLinkJSEnv := NodeJSEnv(executable = "node").value,
@@ -617,7 +617,7 @@ object ScalatestBuild extends Build {
       scalaJSOptimizerOptions ~= { _.withDisableOptimizer(true) },
       //jsEnv := NodeJSEnv(executable = "node").value,
       //jsEnv := PhantomJSEnv().value,
-      scalaJSUseRhino in Global := true, 
+      scalaJSUseRhino in Global := true,
       scalaJSStage in Global := FastOptStage,
       fork in test := false,
       testOptions in Test := scalatestTestJSOptions,
